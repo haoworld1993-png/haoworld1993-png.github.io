@@ -1,0 +1,53 @@
+:root {
+  --paper: #f3ead6;
+  --paper-deep: #e7dcc3;
+  --ink: #2b2521;
+  --ink-soft: #6a5c49;
+  --seal: #9c2f26;
+  --line: #d8ccb2;
+}
+* { box-sizing: border-box; }
+html { color-scheme: light; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "LXGW WenKai TC", "Noto Serif TC", "PingFang TC", "Microsoft JhengHei", serif;
+  line-height: 1.8;
+  font-size: 17px;
+}
+a { color: var(--seal); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.wrap { max-width: 860px; margin: 0 auto; padding: 32px 20px 64px; }
+header.site { text-align: center; padding: 40px 0 16px; }
+header.site img.logo { width: 180px; max-width: 50vw; height: auto; mix-blend-mode: multiply; }
+header.site h1 { margin: 12px 0 0; font-size: 34px; letter-spacing: 0.12em; }
+header.site .en { color: var(--ink-soft); letter-spacing: 0.3em; font-size: 14px; margin-top: 2px; }
+header.site .tag { color: var(--ink-soft); margin-top: 14px; }
+nav.top { text-align: center; margin: 8px 0 28px; font-size: 15px; }
+nav.top a { margin: 0 10px; color: var(--ink-soft); }
+hr.ink { border: 0; height: 2px; background: var(--ink); opacity: 0.85; margin: 28px 0; }
+h2 { font-size: 24px; margin: 36px 0 12px; border-left: 6px solid var(--seal); padding-left: 12px; }
+h3 { font-size: 19px; margin: 28px 0 8px; }
+.games { display: grid; gap: 20px; }
+.game {
+  display: grid; grid-template-columns: 96px 1fr; gap: 18px; align-items: start;
+  background: #fbf6ea; border: 2px solid var(--line); border-radius: 14px; padding: 18px;
+}
+.game img { width: 96px; height: 96px; border-radius: 20px; }
+.game h3 { margin: 0 0 4px; }
+.game .sub { color: var(--ink-soft); font-size: 14px; margin-bottom: 8px; }
+.game .links a { display: inline-block; margin: 6px 12px 0 0; padding: 6px 14px; border: 1.5px solid var(--seal); border-radius: 999px; font-size: 14px; }
+.game .links a.soft { border-color: var(--line); color: var(--ink-soft); }
+table { border-collapse: collapse; width: 100%; margin: 12px 0 18px; font-size: 15px; }
+th, td { border: 1px solid var(--line); padding: 8px 10px; vertical-align: top; text-align: left; }
+th { background: var(--paper-deep); }
+blockquote { margin: 0; padding: 10px 16px; background: var(--paper-deep); border-radius: 10px; color: var(--ink-soft); }
+footer { margin-top: 48px; text-align: center; color: var(--ink-soft); font-size: 14px; }
+.seal { display: inline-block; color: #fff; background: var(--seal); border-radius: 6px; padding: 2px 8px; font-size: 13px; vertical-align: middle; }
+.lang { text-align: right; font-size: 14px; color: var(--ink-soft); margin-top: -8px; }
+@media (max-width: 520px) {
+  .game { grid-template-columns: 72px 1fr; }
+  .game img { width: 72px; height: 72px; }
+  table { display: block; overflow-x: auto; }
+}
